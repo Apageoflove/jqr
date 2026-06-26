@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "jq, but it knows you're an LLM — schema-first, token-budgeted output for AI agents"
 license = "MIT"
-repository = "https://github.com/jqr-ai/jqr"
+repository = "https://github.com/Apageoflove/jqr"
 readme = "README.md"
 
 [[bin]]
