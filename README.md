@@ -18,6 +18,12 @@ I wanted one tool that:
 - **Has a real interface.** Not just stdin → stdout, but an interactive workspace where I can type a query, see the result, refine, and compare — all without leaving the terminal.
 - **Stays fast.** Rust binary, sub-millisecond startup, no runtime dependencies.
 
+## Screenshots
+
+![jqr interactive mode](images/screenshot-1.png)
+
+![jqr query results](images/screenshot-2.png)
+
 ## Install
 
 ### From source
