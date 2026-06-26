@@ -18,11 +18,15 @@ I wanted one tool that:
 - **Has a real interface.** Not just stdin → stdout, but an interactive workspace where I can type a query, see the result, refine, and compare — all without leaving the terminal.
 - **Stays fast.** Rust binary, sub-millisecond startup, no runtime dependencies.
 
-## Screenshots
+## Interactive Terminal UI
 
-![jqr interactive mode](images/screenshot-1.png)
+Load any data file, type `jq` filters, and see results instantly — all without leaving the terminal. The transcript stacks each query and its output so you can compare results across multiple filters:
 
-![jqr query results](images/screenshot-2.png)
+![Interactive query session: load a JSON file, filter data with jq syntax, results appear with syntax highlighting](images/screenshot-1.png)
+
+Switch output modes with `Tab` — from schema-first (structure + sample) to raw JSON, compact, or pretty-printed. Every format you load is tracked, and `Ctrl+E` exports to all of them at once:
+
+![Multiple queries in one session, switching between Envelope / Schema / Raw / Compact modes](images/screenshot-2.png)
 
 ## Install
 

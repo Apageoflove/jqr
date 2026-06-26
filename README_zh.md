@@ -18,11 +18,15 @@ JSON、YAML、TOML、CSV — 用 `jq` 语法查询，随时切换格式，导出
 - **有真正的界面。** 不是简单的 stdin → stdout，而是一个交互式工作台，可以输入查询、看结果、修改、对比 — 全部在终端里完成。
 - **速度要快。** Rust 编译，亚毫秒启动，无运行时依赖。
 
-## 截图
+## 交互式终端界面
 
-![jqr 交互模式](images/screenshot-1.png)
+加载任意数据文件，输入 `jq` 过滤器，实时查看结果 — 全部在终端内完成。每次查询和结果以对话形式堆叠，方便对比不同过滤器的输出：
 
-![jqr 查询结果](images/screenshot-2.png)
+![交互式查询：加载 JSON 文件，用 jq 语法过滤数据，结果带语法高亮](images/screenshot-1.png)
+
+按 `Tab` 切换输出模式 — 从结构优先（schema + 采样）到原始 JSON、紧凑、美化格式。用过的每种格式都会被记录，按 `Ctrl+E` 一键导出全部：
+
+![同一会话中执行多条查询，在 Envelope / Schema / Raw / Compact 模式间切换](images/screenshot-2.png)
 
 ## 安装
 
