@@ -1,0 +1,15 @@
+{
+  "app": "jqr-demo",
+  "version": "2.0.0",
+  "active": true,
+  "users": [
+    { "id": 1, "name": "Alice Chen", "email": "alice@example.com", "age": 30, "role": "admin" },
+    { "id": 2, "name": "Bob Martinez", "email": "bob@example.com", "age": 25, "role": "editor" },
+    { "id": 3, "name": "Carol Singh", "email": "carol@example.com", "age": 35, "role": "viewer" }
+  ],
+  "config": {
+    "timeout": 30,
+    "retries": 3,
+    "endpoints": ["/api/v1", "/api/v2"]
+  }
+}

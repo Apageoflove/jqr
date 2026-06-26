@@ -1,0 +1,58 @@
+[package]
+name = "jqr"
+version = "0.1.0"
+edition = "2021"
+description = "jq, but it knows you're an LLM — schema-first, token-budgeted output for AI agents"
+license = "MIT"
+repository = "https://github.com/jqr-ai/jqr"
+readme = "README.md"
+
+[[bin]]
+name = "jqr"
+path = "src/main.rs"
+
+[features]
+default = ["mcp"]
+mcp = ["dep:rmcp", "dep:tokio"]
+
+[dependencies]
+# jq filter engine
+jaq-core = "1"
+jaq-std = "1"
+jaq-parse = "1"
+jaq-interpret = "1"
+
+# serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = "0.9"
+toml = "0.8"
+csv = "1"
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# terminal
+crossterm = "0.28"
+
+# error handling
+anyhow = "1"
+thiserror = "2"
+
+# async (MCP feature)
+tokio = { version = "1", features = ["rt-multi-thread", "macros"], optional = true }
+
+# MCP server (Pro feature)
+rmcp = { version = "0.6", optional = true, features = ["transport-io"] }
+
+[dev-dependencies]
+tempfile = "3"
+assert_cmd = "2"
+predicates = "3"
+
+[profile.release]
+opt-level = "z"     # optimize for size (single binary)
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"

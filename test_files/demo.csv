@@ -1,0 +1,4 @@
+id,name,email,age,role
+1,Alice Chen,alice@example.com,30,admin
+2,Bob Martinez,bob@example.com,25,editor
+3,Carol Singh,carol@example.com,35,viewer

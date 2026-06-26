@@ -1,0 +1,34 @@
+# Build artifacts
+/target/
+/.cargo/
+/.rustup/
+
+# IDE / Editor
+/.vscode/
+/.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Runtime output
+jqr_output_*.json
+jqr_export_*.json
+jqr_export_*.yaml
+jqr_export_*.toml
+jqr_export_*.csv
+
+# Local wrapper script (points to local build)
+/jqr
+
+# Internal dev files (not for distribution)
+/.omo/
+/.codegraph/
+/.jqrrules
+/activate.sh
+/accuracy_report.txt
+/docs/research/
+manual-steps.txt
